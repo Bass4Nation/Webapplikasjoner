@@ -3,15 +3,15 @@
 
 # Oppgave 1
 ### 1.
-Admin -
+Admin - Som en administartor, vil jeg ha muligheten til å lage spørsmål til en eksamen, slik at det er mulig å ha deltakere ta testen.
 ### 2.
 Admin -
 ### 3.
-Student - 
+Deltaker - 
 ### 4.
-Student -
+Deltaker -
 ### 5.
-Student -
+Deltaker -
 
 Notes
 admin kan lage ulike eksamne
