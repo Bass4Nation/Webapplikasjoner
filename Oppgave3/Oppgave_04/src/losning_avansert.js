@@ -1,4 +1,4 @@
-import './styles.css';
+import "./styles.css";
 
 /**
  *
@@ -8,13 +8,13 @@ import './styles.css';
  *
  */
 
-const numbersUl = document.getElementById('numbers');
-const guessUl = document.getElementById('guess');
-const descEl = document.getElementById('desc');
-const button = document.querySelector('button');
+const numbersUl = document.getElementById("numbers");
+const guessUl = document.getElementById("guess");
+const descEl = document.getElementById("desc");
+const button = document.querySelector("button");
 let direction;
 let numbers = [];
-const directions = ['asc', 'desc'];
+const directions = ["asc", "desc"];
 
 const generateRandomNumber = (uppperLimit, startValue) =>
   Math.floor(Math.random() * uppperLimit + startValue);
@@ -30,17 +30,17 @@ const setDirection = () => {
 };
 
 const getGuess = () => {
-  const answers = guessUl.querySelectorAll('input');
+  const answers = guessUl.querySelectorAll("input");
   return Array.from(answers).map((answer) => answer.value);
 };
 
 const checkNumberSeq = () => {
   const guess = getGuess();
   let isCorrect = false;
-  if (direction === 'asc') {
-    isCorrect = numbers.sort().join('') === guess.join('');
+  if (direction === "asc") {
+    isCorrect = numbers.sort().join("") === guess.join("");
   } else {
-    isCorrect = numbers.sort().reverse().join('') === guess.join('');
+    isCorrect = numbers.sort().reverse().join("") === guess.join("");
   }
   if (isCorrect) {
     resetUI();
@@ -50,7 +50,7 @@ const checkNumberSeq = () => {
 
 const addDescUI = (direction) => {
   descEl.innerHTML = `Sorter etter ${
-    direction === 'asc' ? 'minste først' : 'største først'
+    direction === "asc" ? "minste først" : "største først"
   }`;
 };
 
@@ -84,4 +84,4 @@ const createUI = (number) => {
 
 createUI(2);
 
-button.addEventListener('click', checkNumberSeq);
+button.addEventListener("click", checkNumberSeq);

@@ -1,16 +1,16 @@
-import './styles.css';
+import "./styles.css";
 
 // Henter ut HTML-elementene som skal brukes til å skrive ut tomme inputbokser og tallene som skal gjettes på
-const numbersUl = document.getElementById('numbers');
-const guessUl = document.getElementById('guess');
-// Henter knappen for å kunne litt til klikk på denne
-const button = document.querySelector('button');
+const numbersUl = document.getElementById("numbers");
+const guessUl = document.getElementById("guess");
+// Henter knappen for å kunne lytte til klikk på denne
+const button = document.querySelector("button");
 // Lager en statisk liste med tall
 const numbers = [12, 24, 10, 96, 15, 77, 88];
 
 const getGuess = () => {
   // Henter alle input-feltene som
-  const answers = guessUl.querySelectorAll('input');
+  const answers = guessUl.querySelectorAll("input");
   // Gjør om resultet fra .querySelectorAll til en "ekte" liste slik at vi kan bruke .map
   // Da hvert element i listen er et input kan vi hente ut .value
   return Array.from(answers).map((answer) => answer.value);
@@ -21,9 +21,9 @@ const checkNumberSeq = () => {
   const guess = getGuess();
   // Bruker den statiske listen med tall, sorterer denne og gjør den om til en string med .join("")
   // Sjekker om denne er lik stringen av svarene
-  let isCorrect = numbers.sort().join('') === guess.join('');
+  let isCorrect = numbers.sort().join("") === guess.join("");
   if (isCorrect) {
-    alert('Du sorterte riktig');
+    alert("Du sorterte riktig");
   }
 };
 
@@ -57,4 +57,4 @@ const createUI = () => {
 createUI();
 
 // Lytter til klikk på knappen. Klikk trigger funksjonen som sjekker om sorteringen er rett
-button.addEventListener('click', checkNumberSeq);
+button.addEventListener("click", checkNumberSeq);

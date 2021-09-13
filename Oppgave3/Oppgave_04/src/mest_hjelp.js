@@ -1,25 +1,25 @@
-import './styles.css';
+import "./styles.css";
 
 // TODO: Bruk getElementById til å hente HTML med #id
 // TODO: Bruk querySelector til å hente knappen
-const numbersUl = '';
-const guessUl = '';
-const button = '';
+const numbersUl = "";
+const guessUl = "";
+const button = "";
 // TODO: Lag en liste med tallene som skal sorteres
 const numbers = [];
 
 const getGuess = () => {
   // TODO: Bruk querySelectorAll på guessUl for å hente ut alle input feltene
-  const answers = '';
+  const answers = "";
   // TODO: Bruk .map for å hente ut verdiene i input feltene
   return Array.from(answers).map();
 };
 
 const checkNumberSeq = () => {
   const guess = getGuess();
-  let isCorrect = numbers.sort().join('') === guess.join('');
+  let isCorrect = numbers.sort().join("") === guess.join("");
   if (isCorrect) {
-    alert('Du sorterte riktig');
+    alert("Du sorterte riktig");
   }
 };
 
@@ -46,4 +46,4 @@ const createUI = () => {
 
 createUI();
 
-button.addEventListener('click', checkNumberSeq);
+button.addEventListener("click", checkNumberSeq);

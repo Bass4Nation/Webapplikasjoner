@@ -1,10 +1,10 @@
-import './styles.css';
+import "./styles.css";
 
 // TODO: Bruk getElementById til å hente HTML med #id
 // TODO: Bruk querySelector til å hente knappen
-const numbersUl = '';
-const guessUl = '';
-const button = '';
+const numbersUl = "";
+const guessUl = "";
+const button = "";
 // TODO: Lag en liste med tallene som skal sorteres
 const numbers = [];
 
