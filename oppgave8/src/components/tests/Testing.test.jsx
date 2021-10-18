@@ -1,5 +1,4 @@
 import {fireEvent, render, screen } from '@testing-library/react';
-import { act, renderHook } from '@testing-library/react-hooks';
 import { Testing } from '../Testing';
 
 
@@ -39,4 +38,16 @@ it('Check multiple button presses', () => {
     fireEvent.click(screen.getByText('+'));
     fireEvent.click(screen.getByText('+'));
     expect(text).toHaveTextContent('Number is: 2');
+})
+
+it('Change from False to true', () =>{
+    render(<Testing />);
+    
+    
+    const text = screen.getByText(/Boolean/);
+    expect(text).toHaveTextContent('Boolean is false');
+    fireEvent.click(screen.getByText('*'));
+
+    expect(text).toHaveTextContent('Boolean is true');
+
 })
