@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import PrintAllJSONString from './components/PrintAllJSONString';
 
 export default function Home() {
 
@@ -33,8 +34,6 @@ export default function Home() {
 
     const allText = JSON.stringify(quiz);
 
-    
-
 
     
     return (
@@ -53,7 +52,8 @@ export default function Home() {
                 </h1>
                 <h3> Her skal man kunne få inn informasjonen </h3>
                 {/* ---------- Elementer --------------- */}
-                <p>{allText}</p>
+                
+                <PrintAllJSONString JsonString={allText} />
 
             </main>
             {/* ---------------- Footer --------------- */}
